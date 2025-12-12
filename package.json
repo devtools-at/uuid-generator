@@ -1,0 +1,38 @@
+{
+  "name": "@devtools-at/uuid-generator",
+  "version": "1.0.0",
+  "description": "Generate random UUIDs v4",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "uuid-generator",
+    "devtools",
+    "utility"
+  ],
+  "author": "DevTools.at",
+  "license": "MIT",
+  "homepage": "https://devtools.at/tools/uuid-generator",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devtools-at/uuid-generator.git"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.3.0"
+  }
+}
